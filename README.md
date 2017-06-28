@@ -11,7 +11,7 @@ This package leans heavilly on @mdlayher's [raw](https://github.com/mdlayher/raw
 ## Usage
 Basic publisher and subscriber examples are provided below. Nodes can publish and subscribe to multiple topics.
 
-The API follows MQTT's API loosely.
+The API follows a typical MQTT client API loosely.
 
 ```
 // Create connection
