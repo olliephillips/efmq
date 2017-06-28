@@ -3,7 +3,7 @@ package efmq_test
 import (
 	"testing"
 
-	"github.com/slippytrumpet/efmq"
+	"github.com/olliephillips/efmq"
 )
 
 func TestNewEMFQ(t *testing.T) {
