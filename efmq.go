@@ -123,7 +123,6 @@ func (mq *EFMQ) despatcher(content []byte) error {
 
 func (mq *EFMQ) Subscriptions() []string {
 	return mq.subscription
-
 }
 
 func (mq *EFMQ) Listen() {

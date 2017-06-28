@@ -67,7 +67,7 @@ if err != nil {
 	log.Fatal(err)
 }
 mq.Subscribe("fermenter")
-mq.listen()
+mq.Listen()
 for msg := range mq.Message {
 	fmt.Println("topic:", msg.Topic)
 	fmt.Println("message:", msg.Payload)
