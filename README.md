@@ -6,7 +6,7 @@ EFMQ works a bit like MQTT, but only over your Local Area Network (LAN). Since m
 
 Messaging can be two-way. Each node can operate as publisher and subscriber at the same time, which opens the door for control as well as monitoring applications.
 
-This package leans heavilly on @mdlayher's [raw](https://github.com/mdlayher/raw) and [ethernet](https://github.com/mdlayher/ethernet) packages, which do almost all the heavy lifting.
+This package leans heavily on @mdlayher's [raw](https://github.com/mdlayher/raw) and [ethernet](https://github.com/mdlayher/ethernet) packages, which do almost all the heavy lifting.
 
 ## Usage
 Basic publisher and subscriber examples are provided below. Nodes can publish and subscribe to multiple topics.
