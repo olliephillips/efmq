@@ -125,8 +125,9 @@ func (mq *EFMQ) Subscriptions() []string {
 	return mq.subscription
 }
 
+// Listen announces the subscriptions to which we are subscribed
+// and then starts listener func in go routine
 func (mq *EFMQ) Listen() {
-	// log + block
 	var subs string
 	subsLen := len(mq.subscription)
 	for i, v := range mq.subscription {
