@@ -15,7 +15,7 @@ The API follows MQTT's API loosely.
 
 ```
 // Create connection
-mq, _ := efqm.NewEFMQ(networkInterface string)
+mq, _ := efmq.NewEFMQ(networkInterface string)
 
 // Publish
 mq.Publish(topic string, payload string)
