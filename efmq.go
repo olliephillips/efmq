@@ -121,6 +121,7 @@ func (mq *EFMQ) despatcher(content []byte) error {
 	return nil
 }
 
+// Subscriptions returns list of topics currently subscribed to
 func (mq *EFMQ) Subscriptions() []string {
 	return mq.subscription
 }
