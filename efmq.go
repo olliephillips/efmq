@@ -28,7 +28,7 @@ type Message struct {
 
 const etherType = 0xcccc
 
-// NewEFMQ is a factory functionm to create a value of EFMQ type
+// NewEFMQ is a factory function to create a value of EFMQ type
 func NewEFMQ(networkInterface string) (*EFMQ, error) {
 	mq := new(EFMQ)
 	mq.Message = make(chan Message)
@@ -48,7 +48,7 @@ func NewEFMQ(networkInterface string) (*EFMQ, error) {
 	return mq, nil
 }
 
-// connect opens network inteface to create connection for listening
+// connect opens network interface to create connection for listening
 func connect(ni *net.Interface) (net.PacketConn, error) {
 	var conn net.PacketConn
 	conn, err := raw.ListenPacket(ni, etherType)
@@ -95,7 +95,7 @@ func (mq *EFMQ) Publish(topic string, payload string) error {
 	return nil
 }
 
-// despatcher handles the tranmission of message over ethernet frames
+// despatcher handles the transmission of message over ethernet frames
 func (mq *EFMQ) despatcher(content []byte) error {
 	// configure frame
 	f := &ethernet.Frame{
@@ -127,7 +127,7 @@ func (mq *EFMQ) Subscriptions() []string {
 }
 
 // Listen announces the subscriptions to which we are subscribed
-// and then starts listener func in go routine
+// and then starts listener func in goroutine
 func (mq *EFMQ) Listen() {
 	var subs string
 	subsLen := len(mq.subscription)
