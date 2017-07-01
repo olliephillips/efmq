@@ -4,9 +4,9 @@ EFMQ provides an MQTT pub/sub style abstraction for Ethernet Frame messaging.
 
 [![GoDoc](https://godoc.org/github.com/olliephillips/efmq?status.svg)](https://godoc.org/github.com/olliephillips/efmq) 
 
-EFMQ works a bit like MQTT, but only over your Local Area Network (LAN). Since message traffic is effectively broadcast peer-to-peer, no broker is required, either local or remotely hosted. Since messages are routed locally, within your LAN, it's more secure than using one of the few free remote MQTT servers to bounce your traffic off.
+EFMQ is like MQTT for your Local Area Network (LAN). Unlike MQTT no remote or local broker is required, message traffic is effectively broadcast peer-to-peer. With EFMQ, messages never leave your network. 
 
-Messaging can be two-way. Each node can operate as publisher and subscriber at the same time, which opens the door for control as well as monitoring applications.
+Messaging can be two-way. Each node can operate as either a publisher or subscriber, or both.
 
 This package leans heavily on @mdlayher's [raw](https://github.com/mdlayher/raw) and [ethernet](https://github.com/mdlayher/ethernet) packages, which do almost all the heavy lifting.
 
