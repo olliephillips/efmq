@@ -23,7 +23,7 @@ type EFMQ struct {
 
 type Message struct {
 	Topic   string `json:"tpc"`
-	Payload string `json:"pyld`
+	Payload string `json:"pyld"`
 }
 
 const etherType = 0xcccc
