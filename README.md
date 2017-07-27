@@ -15,7 +15,7 @@ Basic publisher and subscriber examples are provided below. Nodes can publish an
 
 The API follows a typical MQTT client API loosely.
 
-```
+```go
 // Create connection
 mq, _ := efmq.NewEFMQ(networkInterface string)
 
@@ -47,7 +47,7 @@ Message struct {
 ### Publisher example
 The code below will publish data to the `fermenter` topic every second. `en1` is the network interface on Mac (my Mac at least). On a Raspberry Pi it might be `wlan0`. Use `netstat -i` to discover.
 
-```
+```go
 mq, err := efmq.NewEFMQ("en1") 
 if err != nil {
 	log.Fatal(err)
@@ -63,7 +63,7 @@ for range t.C {
 ### Subscriber example
 The code below sets up a subcription to the `fermenter` topic and then listens for messages. Messages are received on a channel.
 
-```
+```go
 mq, err := efmq.NewEFMQ("wlan0")
 if err != nil {
 	log.Fatal(err)
